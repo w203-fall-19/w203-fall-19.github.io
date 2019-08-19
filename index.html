@@ -1,0 +1,533 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<title>W203 Summer 19</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<div id="load_screen" style="position:absolute; background-color:rgba(72, 60, 108, 1 ); width:100vw; height:800vh; z-index:11;top=0">
+<h1 style="position:absolute; text-align: center; font-family:'Orbitron', sans-serif; font-size :20vw; top:50vh; left:50vw; -ms-transform:  translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%)">W203</h1>
+</div>
+<script>
+  function for_mobile() {
+    var w = window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  if (w <= 600) {
+    document.getElementById("imgcar").style.display = "none";
+    document.body.style.background = " url(https://drive.google.com/uc?id=1WE2WkzZ9YqIwK0vsHqAgCvrDcd3DmOUt)"
+    document.body.style.backgroundAttachment = "fixed"
+    document.body.style.backgroundSize = "100vw"
+    document.body.style.backgroundColor = "rgba(72, 60, 108, 1 )"
+    document.body.style.fontSize = "1.1em"
+    document.getElementById("top_banner").innerHTML = "W203";
+    document.getElementById("top_banner").style.fontSize = "1.4em";
+    document.getElementById("top_banner_ul").innerHTML = "W203";
+    document.getElementById("top_banner_ul").style.fontSize = "1.4em";
+    document.getElementById("first_cont").style.marginTop= "80px";
+  } else {
+    document.getElementById("imgcar").style.display = "block"
+    document.body.style.background = "url(https://drive.google.com/uc?id=1yk64bKxu7Uz8SCrDf7ni6AtNWIo8RuL-)"
+    document.body.style.backgroundSize = "100vw" 
+    document.body.style.backgroundAttachment = "fixed"
+    document.body.style.fontSize = "1.4em"
+    document.getElementById("top_banner").innerHTML = "W203 Statistics for Data Science";
+    document.getElementById("top_banner").style.fontSize = "1.4em";
+    document.getElementById("top_banner_ul").innerHTML = "W203 Statistics for Data Science";
+    document.getElementById("top_banner_ul").style.fontSize = "1.4em";
+    document.getElementById("first_cont").style.marginTop= "0";
+  }
+ }
+window.onload = function() {
+document.getElementById("load_screen").style.display = "none"
+for_mobile()
+}
+</script>
+<body  onresize="for_mobile()" ; style="background-color:rgba(0, 0, 0, 0.95); font-family:'Orbitron', sans-serif; font-size:1.4em; color:white; background:url(https://drive.google.com/uc?id=1yk64bKxu7Uz8SCrDf7ni6AtNWIo8RuL-); background-size:100vw; background-position:center; background-attachment:fixed; ">
+<div class="container-fluid"id="top_banner"  style="background-color:rgba(255, 141, 132, 0.9); color:black; z-index: 10; border-bottom: 4px solid black; position: fixed; top:0" >
+<h1>W203 Statistics for Data Science</h1>
+</div>
+<div class="container-fluid"id="top_banner_ul"  style="background-color:black; z-index: 10; color:black" >
+<h1>W203 Statistics for Data Science</h1>
+</div>
+<div id="imgcar" class="carousel slide" data-ride="carousel" style=" display:block; z-index:1; padding:20px ; margin-left:auto; margin-top:60px; margin-right:auto"> 
+<ul class="carousel-indicators">
+<li data-target="#demo" data-slide-to="0" class="active"></li>
+<li data-target="#demo" data-slide-to="2"></li>
+<li data-target="#demo" data-slide-to="3"></li>
+<li data-target="#demo" data-slide-to="4"></li>
+<li data-target="#demo" data-slide-to="5"></li>
+<li data-target="#demo" data-slide-to="6"></li>
+<li data-target="#demo" data-slide-to="7"></li>
+<li data-target="#demo" data-slide-to="8"></li>
+</ul>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://i.imgflip.com/2rsst0.jpg " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1qC7U1lOxlhF2xXkJOOao-4gwnksGr9JB " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">C.F. Gauss<span></h3>
+<p><span style = "background-color:black">"Du machst es falsch"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1f1GIOdXmy_l-qm1I3jMVVxg_1EKmySNH " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">R.A. Fisher<span></h3>
+<p><span style = "background-color:black">"You are doing it wrong"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1ZpUoHUj-hpXuBo7ivuZhLTK2E9PFQFKr " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">A. Kolmogorov<span></h3>
+<p><span style = "background-color:black">"I reported my advisor to Stalin ... just sayin"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1jP01ukg-pFLNetinRZBGPFsky8llYRuQ " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">P. Fermat<span></h3>
+<p><span style = "background-color:black">"Tu fais ca mal"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1a7dIWZMALrLMSsGtrGRDgov7QXE8zrMc " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">J. von Neumann<span></h3>
+<p><span style = "background-color:black">"Rosszul Csinalod"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=13AudCilsf3Y3N30dQNfnVC_e2mf6Sb3M " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">I. Newton<span></h3>
+<p><span style = "background-color:black">"You guys figure out the whole lead to gold thing yet?"</span></p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://drive.google.com/uc?id=1K1oQyto4NAQtiffaUNlzGyAErn2_Wl27 " alt="none " width="auto " height="750 " style="height:65vw; max-height:  70vh; display:block; margin-left:auto ; margin-right:auto; padding:20px ; background-color:black"> 
+<div class="carousel-caption">
+<h3><span style = "background-color:black">A. Turing<span></h3>
+<p><span style = "background-color:black">"I shortened WWII by 2 years ... you are welcome"</span></p>
+</div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#imgcar" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#imgcar" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
+</div><br>
+<div id="first_cont" class="container" style="background-color:rgba(0, 0, 0, 0.95); border-radius: 16px; " >
+<div class="container" style="background-color:rgba(255, 141, 132, 0.9); z-index: 100; color:black" >
+<h2>General Information</h2>
+</div>
+<div class="row" style="margin-top:30px" >
+<div class="col-sm-6" style="overflow: scroll;padding-left:30px">
+<h3 style="text-decoration:underline"> Instructors </h3>
+Alex Hughes: d.alex.hughes@ischool.berkeley.edu<br><br>
+Paul Laskowski: paul@ischool.berkeley.edu<br><br>
+Gunnar Kleeman: gunnarklee@ischool.berkeley.edu<br><br>
+Mark Labovitz: mlabovitz@ischool.berkeley.edu<br><br>
+Majid Maki Nayeri: m_maki@ischool.berkeley.edu<br><br>
+</div><br>
+<div class="col-sm-6" style="overflow: scroll;padding-left:30px">
+<h3 style="text-decoration: underline"> Teaching Assitants</h3>
+Gurdit Chahal: g.s.chahal@berkeley.edu<br><br>
+Todd Young: todd.young@ischool.berkeley.edu<br><br>
+Jeremy Fraenkel: jeremyfraenkel@ischool.berkeley.edu<br><br>
+</div><br>
+</div><br>
+<div>
+<button href="#oh"data-toggle="tab"onclick="scroll_to_cal()"style="background-color:rgba(31, 240, 219, 0.95);border: none;color: white;padding: 15px 32px;text-align:center;text-decoration:none;display:block;margin-left: auto;margin-right: auto;cursor: pointer;font-size: 24px">Office Hours Schedule</button>
+<script>
+function scroll_to_cal() {
+var calndr = document.getElementById("calendar")
+calndr.scrollIntoView();
+}
+</script>
+</div><br>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Sections</h3>
+Section 1: Alex Hughes, Wednesday, 4:00 PM, <br><br>Section 2: Gunnar Kleeman, Wednesday, 4:00 PM, <br><br>Section 3: Gunnar Kleeman, Wednesday, 6:30 PM, <br><br>Section 4: Majid Maki Nayeri, Tuesday, 4:00 PM, <br><br>Section 5: Majid Maki Nayeri, Thursday, 4:00 PM, <br><br>Section 6: Mark Labowitz, Saturday, 10:00 AM, <br><br>Section 98: Paul Laskowski, Monday, 4:00 PM, <br><br>Section 99: Paul Laskowski, Tuesday, 4:00 PM, <br><br></div><br>
+</div><br>
+<div class="container" style="background-color:rgba(0, 0, 0, 0.95); margin-top:200px; border-radius: 16px; " >
+<div id="calendar" class="container" style="background-color:rgba(255, 141, 132, 0.9); z-index: 100; color:black" >
+<h2>Class Schedule</h2>
+</div>
+<ul class="nav nav-tabs" style="margin-top:40px">
+<li class="nav-item"><a class="nav-link active" style=" background-color: rgba(31, 240, 219, 0.95); color:white; margin-right:1px " data-toggle="tab" href="#tbl_1">Async Content </a></li>
+<li class="nav-item"><a class="nav-link" style=" background-color:rgba(31, 240, 219, 0.95); color:white; margin-right:1px  " data-toggle="tab"  href="#tbl_2">Readings</a></li>
+<li class="nav-item"><a class="nav-link" style=" background-color:rgba(31, 240, 219, 0.95); color:white; margin-right:1px  " data-toggle="tab"  href="#tbl_3">Assignments</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"  style=" background-color:rgba(31, 240, 219, 0.95); color:white; margin-right:1px " data-toggle="dropdown" href="#"> Calendars </a>
+<div class="dropdown-menu">
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec1"> Section 1 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec2"> Section 2 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec3"> Section 3 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec4"> Section 4 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec5"> Section 5 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec6"> Section 6 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec98"> Section 98 </a>
+<a class="dropdown-item" style=" background-color: rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#cal_sec99"> Section 99 </a>
+<a class="dropdown-item" style=" background-color:rgba(31, 240, 219, 0.95); color:black; margin-right:1px  " data-toggle="tab" href="#oh "> Office Hours  </a>
+</div>
+</ul>
+<div class="tab-content">
+<div id="tbl_1" class="tab-pane fade in active show">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Week </th>
+<th>Topic </th>
+<th>Video Units </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Class Introduction</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Probability Theory</td>
+<td>2.4,2.5,3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Discrete Random Variables</td>
+<td>4.1-4.9 and 4.12</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Continuous Random Variables</td>
+<td>4.10-4.16</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Joint Distributions of Random Variables</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Sampling Distributions and the Central Limit Theorem</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Estimation</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Confidence Intervals and Hypothesis Testing</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Comparing Means and Reproducibility</td>
+<td>9, optional videos on non-parametric tests, 2.14 and 2.15</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Simple Linear Regression</td>
+<td>10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Multivariate Linear Regression and Endogeneity</td>
+<td>11</td>
+</tr>
+<tr>
+<td>12</td>
+<td> Inference in Multivariate Linear Regression</td>
+<td>12</td>
+</tr>
+<tr>
+<td>13</td>
+<td> Linear Regression: Interpretation and More Testing</td>
+<td>13</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Causality</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="tbl_2" class="tab-pane fade"> 
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Week </th>
+<th>Assigned Readings </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Devore Ch 1 <br><br> Fox Ch 1.1, 1.4, 2.1, 2.2, 2.3, 3.1.1, 3.1.4, 3.2.1 (at study.net)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Devore Ch 2 and <a href = "patent_reading.pdf">this handout</a> about patents</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Devore Ch 3-3.4 <br> <br> Optional: Devore Ch 3.5, 3.6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Devore Ch 4-4.3, 4.6 <br> <br> Optional: Devore Ch 4.4, 4.5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Devore Ch 5.1, 5.2, and <a href="https://www.wired.com/2008/06/pb-theory/">The End of Theory by Chris Anderson</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Devore Ch 5.3-5.5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Devore Ch 6, 7.1, 7.2, 7.3. <br> <br>Note: In 7.2, the subsections titled A Confidence Interval for a Population Proportion and One-Sided Confidence Intervals (Confidence Bounds) are optional. In 7.3, the sections titled A Prediction Interval for a Single Future Value and Tolerance Intervals are optional.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Devore Ch 8-8.3 8.5. <br><br> Note: Within 8.5, you are only responsible for reading Statistical Versus Practical Significance and The Relationship Between Confidence Intervals and Hypothesis Tests.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Devore Ch 9-9.3<br><br>Wagenmakers, E., Wetzels, R., Borsboom, D., & van der Maas, H. (2011, March). Why psychologists must change the way they analyze their data: The case of psi: Comment on Bem. Journal of Personality and Social Psychology, Vol 100(3), 426-432.<br><br>Why Most Published Research Findings Are False (http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124)<br><br>Dienes, Z. (2008). Understanding psychology as a science. New York, NY: Palgrave. Chapter 3  (at study.net)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Wooldridge Ch 2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Wooldridge Ch 3-3c, 5.1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Wooldridge Ch 3.4 through the end of Chapter 3, 4-4.3, 5.2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Wooldridge Ch 4.4 through end of Chapter 4, 6-6.2, 7-7.4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="tbl_3" class="tab-pane fade"> 
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Week </th>
+<th>Assigned </th>
+<th>Due </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>unit_1_hw</td>
+<td>none</td>
+</tr>
+<tr>
+<td>2</td>
+<td>unit_3_hw</td>
+<td>unit_1_hw</td>
+</tr>
+<tr>
+<td>3</td>
+<td>unit_4_part_1_hw</td>
+<td>unit_3_hw</td>
+</tr>
+<tr>
+<td>4</td>
+<td>unit_4_part_2_hw</td>
+<td>unit_4_part_1_hw</td>
+</tr>
+<tr>
+<td>5</td>
+<td>unit_5_hw</td>
+<td>unit_4_part_2_hw</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Lab 1: Probability Theory</td>
+<td>unit_5_hw</td>
+</tr>
+<tr>
+<td>7</td>
+<td>unit_7_hw</td>
+<td>Lab 1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Quiz 1 & unit_8_hw</td>
+<td>unit_7_hw</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Lab 2: Comparing Means</td>
+<td>Quiz 1 & unit_8_hw</td>
+</tr>
+<tr>
+<td>10</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Lab 3 Part 1</td>
+<td>Lab 2</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Lab 3 Part 2 & unit_12_hw</td>
+<td>Lab 3 Part 1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Lab 3 Part 3 & Quiz 2</td>
+<td>Lab 3 Part 2 & unit_12_hw</td>
+</tr>
+<tr>
+<td>14</td>
+<td>none</td>
+<td>Lab 3 Part 3 & Quiz 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="cal_sec1" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_q9f4gs67h8q2sb8p9k3bkdmono@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec2" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_rnmgl5540hbsrjo6mfmjvj38b4@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec3" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_nn6dkarl9j8r5sm6fg4pi0urhg@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec4" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_9m29jcsm6f5pcdvmmjt2ctm0a4@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec5" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_qc1o52tb3co1lbg1g05u94e0dg@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec6" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_f56uouamkeh2jvkc4c10v98kac@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec98" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_96l4msqb5daaciq06d5d274ivs@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="cal_sec99" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_vruu72q1otbr6jp36thlrn8vi8@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<div id="oh" class="tab-pane fade" style="overflow:scroll">
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=berkeley.edu_csi6cm08iv4opo4vjoaq74tc1o@group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style="border-width:0; min-width:800px" width="100%" height="800" frameborder="0" scrolling="no"></iframe></div>
+<br>
+</div><br>
+</div><br>
+<div class="container" style="background-color:rgba(0, 0, 0, 0.95); margin-top:200px; border-radius: 16px; " >
+<div class="container" style="background-color:rgba(255, 141, 132, 0.9); z-index: 100; color:black" >
+<h2>Syllabus</h2>
+</div> <br>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Description</h3>
+The goal of this course is to provide students with a foundational understanding of classical statistics and how it fits within the broader context of data science.  Students will learn to apply the most common statistical procedures correctly, checking assumptions and responding appropriately when they appear violated.  Emphasis is placed on different practices that constitute an effective analysis, including formulating research questions, operationalizing variables, exploring data, selecting hypothesis tests, and communicating results.<br><br>
+The course begins with an introduction to probability theory, with pencil-and-paper problem sets to develop intuition for the key concepts that underlie statistical models.  Next, we use the simple example of the mean to demonstrate the use of estimators and hypothesis tests.  We then turn to classical linear regression, taking several weeks to build a strong understanding of this central topic.  Our treatment stresses causal inference and includes a discussion of omitted variables.  At the end, we describe some of the concerns that arise in the process of specifying linear models.  Throughout the course, students will practice analyzing real-world data using the open-source language, R.(3 units)<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Prerequisites</h3>
+<ul>
+<li> Working knowledge of calculus. A good understanding of linear algebra is strongly recommended, as the course will make occasional use of matrix notation.<br><br>
+</li><li>At least one prior college-level statistics course is recommended.<br><br>
+</li></ul>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Sites</h3>
+<a href="https://github.com/w203-summer-19">Github</a>: This is where all course documents will be distributed to you. Throughout the course of the semester we will release (grant you access to specific private repositories) live session documents, homeworks, labs, datasets, and really anything else. It is your responsibility to clone, manage, and keep up to date the repos that you are given access to. We recommend that as soon as you are given access to a repo you clone that repo onto your machine and then  immediately start a working branch of that repo so that any updates that we may later push will not cause any merge conflicts.<br><br>
+<a href="https://piazza.com/class/jukfsq1loyr6ug">Piazza Forum</a>: This is where all communications between students and instructors will take place for this course. You can post questions, messages and the like to the  whole class, other student or the instructors as yourself or anonymously. We encourage you to ask and answer question posed to the entire class those who do will be rewarded for it!<br><br>
+<a href="https://learn.datascience.berkeley.edu/login">I School Virtual Campus</a>: This is where you will watch async video, turn in assignments, take quizzes, and get your grades. There are number of important requirement regarding the manner in which you will need to turn in assignments, some with penalties for non compliance it is your responsibility to know and act in accordance with these any question should be posted to piazza asap.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Weekly Workflow</h3>
+<b>Before Live Session</b>: Students watch the asynchronous videos and study the assigned readings for a given unit.  Note that the readings are mandatory and often include more examples than provided in the videos.<br><br>
+<b>During Live Session</b>: Students engage in activities to reinforce and extend the materials they studied.<br><br>
+<b>After Live Session</b>: Students complete the homework, lab, or other assignments corresponding to the given unit.  Homeworks will be due at the start of the following live session.  See individual labs for their due dates.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Required Textbooks</h3>
+<ul>
+<li>Devore, J. L. (2015). Probability and statistics for engineering and the sciences Boston, MA: Cengage Learning. 9th Edition. In the past, students have downloaded the 8th edition, for less money or for free, and found this to be sufficient for the course.  The largest differences we have found between the 8th and 9th editions are in Chapter 8.  We have included this chapter in the study.net course packet, below.<br><br>
+</li><li>Wooldridge, J. (2015). Introductory econometrics: A modern approach 6th ed. Boston, MA: Cengage Learning.<br><br>
+</li></ul>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Other Required Readings</h3>
+<ul>
+<li><a href="http://www.study.net/r_mat.asp?crs_id=30140273">Study.net</a>: Further readings are provided in a course packet, which should be purchased through study.net.  The link will be posted on ISVC<br><br>
+</li></ul>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Grading</h3>
+<ul>
+<li>Probability Theory Lab (individual lab) - 20 percent<br><br>
+</li><li>Comparing Means Lab (group lab) - 20 percent<br><br>
+</li><li>Linear Regression Lab (group lab) - 20 percent<br><br>
+</li><li>2 Quizzes - 10 percent (5 percent each)<br><br>
+</li><li>Weekly Homework - 20 percent<br><br>
+</li><li>Class Participation - 10 percent<br><br>
+</li></ul>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Weekly Homework</h3>
+Most weeks of the course include a homework set that is designed to reinforce the concepts covered in class.  Each homework is due at the start of the following live session.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Labs</h3>
+The course includes three labs, which are larger assignments designed to extend your knowlege with a focus on connecting statistical theory to practical application.<br><br>
+The Probability Theory lab is a culmination of the first major section of the course.  It includes pencil-and-paper exercises to build intuition for the mathematical building blocks that underly statistics.  This is an individual lab.<br><br>
+The Comparing Means lab is an introduction to writing statistical analysis.  Focus is placed on the proper selection and interpretation of statistical tests, as well as effective argument and writing style.  Students will work in teams of two or three to complete this lab.<br><br>
+The Linear Regression Lab gives students a chance to synthesize knowledge gained throughout the semester and combine technical, inferential, and strategic thinking to produce a professional-level analysis.  In the course of this assignment, student teams will have a chance to provide peer feedback to each other.  This will be a chance to practice critical reading of statistical analysis, and enable the strongest possible final products.  Students will work in teams of two or three to complete this lab.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Quizzes</h3>
+The purpose of the quizzes is to test your ability to reason about the concepts covered in the course.  Quizzes will be conducted under a time limit and may include multiple-choice questions, short-answer questions, and other question types.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">File Types</h3>
+For any assignment that includes R work, you must submit both 1. an output file (.pdf or .html) and 2. a source file used to generate your output (.ipynb or .Rmd or .R).  Mathematical exercises may be typeset using Latex, or hand-written and scanned, but you must ensure that the final file is easy to read.  Forgetting to submit any of the required files will result in a non-refundable 3-point deduction.  Instructors will not grade submissions with unusual file types or formatting that makes access difficult.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Office Hours</h3>
+Office hours are a central component of this course, giving instructors the chance to tailor explanations to individual students.  Students may attend the office hours of any instructor, and they are encouraged to attend as many office hours as possible.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Participation</h3>
+Students are expected to be active participants in class activities and to come to the live sessions prepared to discuss the videos and readings.  Students should also come to class with questions that they would like to discuss with classmates and the instructor.  Most importantly, we expect all students to behave professionally and help create a supportive learning environment.<br><br>
+</div>
+<div class="container-fluid">
+<h3 style="text-decoration: underline">Late Policy</h3>
+Homework and labs submitted after the deadline will be docked an automatic 20 percent.  Unfortunately, we are not able to accept any work after the live session in which we discuss the solutions.<br><br>
+</div>
+</div><br><br>
+</body>
